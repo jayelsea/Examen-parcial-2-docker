@@ -1,0 +1,19 @@
+# Ignorar dependencias del backend
+backend/node_modules/
+
+# Variables de entorno
+backend/.env
+
+# Carpetas de compilación (opcional, si usas build)
+backend/dist/
+backend/build/
+
+# Logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db

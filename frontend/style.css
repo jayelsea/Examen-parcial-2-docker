@@ -1,0 +1,91 @@
+/* ----- Fuente y reset ----- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+/* ----- Título ----- */
+h1 {
+  margin: 0 0 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #4b47ff;
+}
+
+/* ----- Tarjeta‑formulario ----- */
+form {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ----- Campos ----- */
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  background-color: #fafbff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.25);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+/* ----- Botón ----- */
+button {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #5750d6;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* ----- Responsive pequeño ----- */
+@media (max-width: 480px) {
+  form {
+    padding: 2rem;
+  }
+}
+
