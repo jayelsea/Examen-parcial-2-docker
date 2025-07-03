@@ -10,4 +10,9 @@ Este proyecto permite calcular y registrar el diagnóstico nutricional de una pe
 ### 1. Entra al directorio del proyecto
 
 ```bash
-cd proyecto-nutricion
+cd proyecto-nutricion```
+
+### 2. Entra al directorio del proyecto
+
+```bash
+sudo docker compose up --build```
