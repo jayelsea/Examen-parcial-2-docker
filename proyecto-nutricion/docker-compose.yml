@@ -11,8 +11,16 @@ services:
       POSTGRES_DB: salud
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app_network
 
   backend:
     build: ./backend
@@ -22,6 +30,8 @@ services:
       - db
     ports:
       - "3000:3000"
+    networks:
+      - app_network
 
   frontend:
     build: ./frontend
@@ -29,3 +39,26 @@ services:
     restart: always
     ports:
       - "8080:80"
+    networks:
+      - app_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+
