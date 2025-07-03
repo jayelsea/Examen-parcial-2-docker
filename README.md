@@ -35,15 +35,15 @@ sudo docker exec -it postgres_container psql -U user -d salud
 ```
 Dentro del cliente psql:
 
-``bash
+```bash
 SELECT * FROM diagnosticos;
 ```
-###Detener todos los servicios
+### Detener todos los servicios
 
 ```bash
 sudo docker compose down
 ```
-###📂 Estructura del proyecto
+### 📂 Estructura del proyecto
 
 proyecto-nutricion/
 ├── backend/              # API Node.js
@@ -52,7 +52,7 @@ proyecto-nutricion/
 ├── init.sql              # Script SQL de tabla
 └── README.md             # Documentación del proyecto
 
-###✅ Requisitos
+### ✅ Requisitos
 Docker
 
 Docker Compose
